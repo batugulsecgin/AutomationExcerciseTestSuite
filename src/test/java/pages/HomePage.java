@@ -11,11 +11,14 @@ public class HomePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    // 1) 'Signup / Login' button
+    // Login Feature elementleri
     @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a")
     public WebElement btnSignupLogin;
 
-    // 5) The sign confirms we Logged in as "username"
     @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[10]/a/b")
     public WebElement txtLoggedInUsername;
+
+    // YENİ EKLENEN: Register Feature için Delete Account butonu
+    @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[5]/a")
+    public WebElement btnDeleteAccount;
 }

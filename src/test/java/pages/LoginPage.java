@@ -11,19 +11,29 @@ public class LoginPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    // "Login to your account" yazısını doğrulamak için bir xpath oluşturduk
+    // Login Feature elementleri
     @FindBy(xpath = "//h2[text()='Login to your account']")
     public WebElement txtLoginToYourAccount;
 
-    // 2) E-mail adress bar
     @FindBy(xpath = "//*[@id=\"form\"]/div/div/div[1]/div/form/input[2]")
     public WebElement inputEmail;
 
-    // 3) Password bar
     @FindBy(xpath = "//*[@id=\"form\"]/div/div/div[1]/div/form/input[3]")
     public WebElement inputPassword;
 
-    // 4) Login Button
     @FindBy(xpath = "//*[@id=\"form\"]/div/div/div[1]/div/form/button")
     public WebElement btnLogin;
+
+    // YENİ EKLENEN: Register Feature için New User Signup elementleri
+    @FindBy(xpath = "//h2[text()='New User Signup!']")
+    public WebElement txtNewUserSignup;
+
+    @FindBy(xpath = "//*[@id=\"form\"]/div/div/div[3]/div/form/input[2]")
+    public WebElement inputSignupName;
+
+    @FindBy(xpath = "//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")
+    public WebElement inputSignupEmail;
+
+    @FindBy(xpath = "//*[@id=\"form\"]/div/div/div[3]/div/form/button")
+    public WebElement btnSignup;
 }
