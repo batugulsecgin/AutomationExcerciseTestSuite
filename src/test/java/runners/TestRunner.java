@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         glue = "stepdefinitions",
 
         //Kullanılabilir tag'ler: @smoke, @register
-        tags = "@register",
+        tags = "@smoke",
         dryRun = false
 )
 public class TestRunner {
