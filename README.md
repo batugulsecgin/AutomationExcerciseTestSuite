@@ -3,7 +3,7 @@
 This repository contains a robust, scalable, and fully functional Test Automation Framework built for the [Automation Exercise](https://automationexercise.com/) website. The framework is designed using **Java**, **Selenium WebDriver**, and **Cucumber (BDD)**, adhering strictly to **Page Object Model (POM)** and **Clean Code** principles.
 
 ## 🚀 Tech Stack & Tools
-* **Programming Language:** Java 17
+* **Programming Language:** Java 26
 * **Browser Automation:** Selenium WebDriver (v4.21.0)
 * **BDD Framework:** Cucumber (v7.18.0)
 * **Test Runner:** JUnit 4
