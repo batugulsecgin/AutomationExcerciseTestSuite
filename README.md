@@ -41,7 +41,7 @@ This repository contains a robust, scalable, and fully functional Test Automatio
 You can execute the test suite using the JUnit TestRunner class located in src/test/java/runners/TestRunner.java.
 To run specific test scenarios, update the tags parameter within the @CucumberOptions annotation:
 
-```java
+```text
 tags = "@smoke"      // Runs smoke/login test
 tags = "@register"   // Runs registration test
 tags = "@logout"   // Runs logout test
