@@ -29,4 +29,12 @@ public class HomePage {
     // YENİ EKLENEN: Contact Us butonu
     @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[8]/a")
     public WebElement btnContactUs;
+
+    // YENİ EKLENEN: Test Cases butonu
+    @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[5]/a")
+    public WebElement btnTestCases;
+
+    // YENİ EKLENEN: Products butonu
+    @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[2]/a")
+    public WebElement btnProducts;
 }

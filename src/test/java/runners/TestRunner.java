@@ -13,10 +13,11 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml"
         },
         features = "src/test/resources/features",
-        glue = "stepdefinitions",
+        glue = {"stepdefinitions", "hooks"},
 
-        //Kullanılabilir tag'ler: @smoke, @register, @negative_login, @logout, @existing_email, @contact
-        tags = "@contact",
+        //Kullanılabilir tag'ler:
+        // @smoke, @register, @negative_login, @logout, @existing_email, @contact, @testcases, @products
+        tags = "@products",
         dryRun = false
 )
 public class TestRunner {
