@@ -25,4 +25,8 @@ public class HomePage {
     // YENİ EKLENEN: Logout butonu
     @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a")
     public WebElement btnLogout;
+
+    // YENİ EKLENEN: Contact Us butonu
+    @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[8]/a")
+    public WebElement btnContactUs;
 }
