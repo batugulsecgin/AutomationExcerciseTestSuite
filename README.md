@@ -42,8 +42,14 @@ You can execute the test suite using the JUnit TestRunner class located in src/t
 To run specific test scenarios, update the tags parameter within the @CucumberOptions annotation:
 
 ```java
-tags = "@smoke"      // Runs critical smoke tests
-tags = "@register"   // Runs registration tests
+tags = "@smoke"      // Runs smoke/login test
+tags = "@register"   // Runs registration test
+tags = "@logout"   // Runs logout test
+tags = "@contactus"   // Runs contact test
+tags = "negative_login"   // Runs invalid login test
+
+//These are the example cases. For more, please take a look at the
+//"TestRunner" class and the feature files for all available tags.
 ```
 Alternatively, run tests via Maven command line:
 
