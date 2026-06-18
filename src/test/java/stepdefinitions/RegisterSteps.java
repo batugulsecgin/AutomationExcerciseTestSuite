@@ -116,4 +116,19 @@ public class RegisterSteps {
             Driver.getDriver().get("https://automationexercise.com/");
         }
     }
+
+    // "Existing Username/Email" durumu için gereken adımlar
+    @When("Enter name and already registered email address")
+    public void enter_name_and_already_registered_email_address() {
+        // Bu senaryoda dinamik değil, sistemde var olan statik mock e-postayı kullanıyoruz
+        loginPage.inputSignupName.sendKeys("test user");
+        loginPage.inputSignupEmail.sendKeys("test@test0908067.com");
+    }
+
+    @Then("Verify error Email Address already exist! is visible")
+    public void verify_error_email_address_already_exist_is_visible() {
+        // Hata mesajının ekranda belirdiğini doğruluyoruz
+        Assert.assertTrue(loginPage.txtEmailAlreadyExistError.isDisplayed());
+    }
+
 }

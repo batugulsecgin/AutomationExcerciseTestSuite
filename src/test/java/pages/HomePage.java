@@ -21,4 +21,8 @@ public class HomePage {
     // YENİ EKLENEN: Register Feature için Delete Account butonu
     @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[5]/a")
     public WebElement btnDeleteAccount;
+
+    // YENİ EKLENEN: Logout butonu
+    @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a")
+    public WebElement btnLogout;
 }

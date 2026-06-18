@@ -36,4 +36,12 @@ public class LoginPage {
 
     @FindBy(xpath = "//*[@id=\"form\"]/div/div/div[3]/div/form/button")
     public WebElement btnSignup;
+
+    // YENİ EKLENEN: Negatif Login Hata Mesajı
+    @FindBy(xpath = "//*[@id=\"form\"]/div/div[1]/div[1]/div/form/p")
+    public WebElement txtErrorMessage;
+
+    // YENİ EKLENEN: Kayıtlı E-posta Hata Mesajı
+    @FindBy(xpath = "//*[@id=\"form\"]/div/div[1]/div[3]/div/form/p")
+    public WebElement txtEmailAlreadyExistError;
 }

@@ -19,3 +19,14 @@ Feature: User Registration Feature
     Then Verify that Logged in as username is visible
     When Click Delete Account button
     Then Verify that ACCOUNT DELETED! is visible and click Continue button
+
+
+  @existing_email
+  Scenario: Register User with existing email
+    Given Launch browser and navigate to url "http://automationexercise.com"
+    Then Verify that home page is visible successfully
+    When Click on Signup_Login button
+    Then Verify New User Signup! is visible
+    When Enter name and already registered email address
+    And Click Signup button
+    Then Verify error Email Address already exist! is visible

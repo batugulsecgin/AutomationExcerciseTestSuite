@@ -15,8 +15,8 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "stepdefinitions",
 
-        //Kullanılabilir tag'ler: @smoke, @register
-        tags = "@smoke",
+        //Kullanılabilir tag'ler: @smoke, @register, @negative_login, @logout, @existing_email
+        tags = "@existing_email",
         dryRun = false
 )
 public class TestRunner {
