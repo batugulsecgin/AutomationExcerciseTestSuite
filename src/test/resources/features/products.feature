@@ -9,3 +9,14 @@ Feature: Products and Product Details Feature
     When Click on View Product of first product
     Then User is landed to product detail page
     And Verify that details are visible: product name, category, price, availability, condition, brand
+
+
+  @search_product
+  Scenario: Search Product
+    Given Launch browser and navigate to url "http://automationexercise.com"
+    Then Verify that home page is visible successfully
+    When Click on Products button
+    Then Verify user is navigated to ALL PRODUCTS page successfully
+    When Enter product name in search input and click search button
+    Then Verify SEARCHED PRODUCTS is visible
+    And Verify all the products related to search are visible

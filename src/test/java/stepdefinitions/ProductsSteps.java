@@ -55,4 +55,31 @@ public class ProductsSteps {
         // Tüm bu bilgileri barındıran HTML bloğunun (container) ekranda göründüğünü doğruluyoruz
         Assert.assertTrue(productDetailPage.containerProductInformation.isDisplayed());
     }
+
+    @When("Enter product name in search input and click search button")
+    public void enter_product_name_in_search_input_and_click_search_button() {
+        // Senin belirlediğin mock (örnek) veriyi gönderiyoruz
+        productsPage.inputSearchProduct.sendKeys("top");
+
+        // Arama butonuna reklama takılmamak için JS ile tıklıyoruz
+        ReusableMethods.clickWithJS(productsPage.btnSubmitSearch);
+    }
+
+    @Then("Verify SEARCHED PRODUCTS is visible")
+    public void verify_searched_products_is_visible() {
+        // Arama sonucunda başlığın değiştiğini doğruluyoruz
+        Assert.assertTrue(productsPage.txtSearchedProducts.isDisplayed());
+    }
+
+    @And("Verify all the products related to search are visible")
+    public void verify_all_the_products_related_to_search_are_visible() {
+        // 1. İSTEĞİN ÜZERİNE: Sayfayı yukarıdan aşağıya yavaşça scroll yapıyoruz
+        ReusableMethods.scrollDownGradually();
+
+        // 2. KOD SEVİYESİNDE DOĞRULAMA: Sadece kaydırmakla kalmıyor,
+        // arama sonucu dönen tüm ürün kartlarının (listSearchedProducts) ekranda göründüğünü tek tek Assert ediyoruz.
+        for (org.openqa.selenium.WebElement product : productsPage.listSearchedProducts) {
+            Assert.assertTrue(product.isDisplayed());
+        }
+    }
 }
