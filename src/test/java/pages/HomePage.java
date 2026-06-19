@@ -37,4 +37,17 @@ public class HomePage {
     // YENİ EKLENEN: Products butonu
     @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[2]/a")
     public WebElement btnProducts;
+
+    // YENİ EKLENENLER: Subscription (Abonelik) Bölümü Elementleri
+    @FindBy(xpath = "//*[@id=\"footer\"]/div[1]/div/div/div[2]/div/h2")
+    public WebElement txtSubscription;
+
+    @FindBy(xpath = "//*[@id=\"susbscribe_email\"]")
+    public WebElement inputSubscribeEmail;
+
+    @FindBy(xpath = "//*[@id=\"subscribe\"]/i")
+    public WebElement btnSubscribe;
+
+    @FindBy(xpath = "//*[@id=\"success-subscribe\"]/div")
+    public WebElement txtSuccessSubscribe;
 }
