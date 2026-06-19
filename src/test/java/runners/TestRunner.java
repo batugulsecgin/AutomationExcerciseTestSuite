@@ -17,8 +17,9 @@ import org.junit.runner.RunWith;
 
         //Kullanılabilir tag'ler:
         // @smoke, @register, @negative_login, @logout, @existing_email, @contact,
-        // @testcases, @products, @search_product, @subscription
-        tags = "@subscription",
+        // @testcases, @products, @search_product, @subscription, @cart_subscription
+        // @add_to_cart
+        tags = "@add_to_cart",
         dryRun = false
 )
 public class TestRunner {

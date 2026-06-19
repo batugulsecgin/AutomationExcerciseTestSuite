@@ -31,4 +31,27 @@ public class ProductsPage {
     // (Senin listende yoktu) 8. adım için sayfada çıkan "tüm" ürün kartlarını yakalayan Liste
     @FindBy(xpath = "//div[contains(@class, 'productinfo')]")
     public java.util.List<WebElement> listSearchedProducts;
+
+    // YENİ EKLENENLER: Sepete Ekleme Senaryosu Elementleri
+
+    // Hover (üzerine gelme) yapılacak olan ilk ve ikinci ürün resimleri
+    @FindBy(xpath = "/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[1]/div[1]/img")
+    public WebElement imgFirstProduct;
+
+    @FindBy(xpath = "/html/body/section[2]/div/div/div[2]/div/div[3]/div/div[1]/div[1]/img")
+    public WebElement imgSecondProduct;
+
+    // Ürünlerin altındaki "Add to cart" butonları (Senin verdiğin XPath'ler)
+    @FindBy(xpath = "/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[1]/div[2]/div/a")
+    public WebElement btnAddToCartFirst;
+
+    @FindBy(xpath = "/html/body/section[2]/div/div/div[2]/div/div[3]/div/div[1]/div[2]/div/a")
+    public WebElement btnAddToCartSecond;
+
+    // Çıkan pop-up (Modal) içindeki butonlar
+    @FindBy(xpath = "//*[@id=\"cartModal\"]/div/div/div[3]/button")
+    public WebElement btnContinueShopping;
+
+    @FindBy(xpath = "//*[@id=\"cartModal\"]/div/div/div[2]/p[2]/a/u")
+    public WebElement btnViewCartModal;
 }

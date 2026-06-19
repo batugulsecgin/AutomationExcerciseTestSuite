@@ -1,5 +1,5 @@
 package utilities;
-
+import org.openqa.selenium.interactions.Actions; // Bu importu en başa eklemeyi unutma
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
@@ -31,5 +31,11 @@ public class ReusableMethods {
                 e.printStackTrace();
             }
         }
+    }
+
+    // YENİ EKLENEN: Fareyi bir elementin üzerine götürme (Hover) işlemi
+    public static void hover(WebElement element) {
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(element).perform();
     }
 }

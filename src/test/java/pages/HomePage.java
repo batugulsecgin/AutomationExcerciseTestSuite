@@ -50,4 +50,8 @@ public class HomePage {
 
     @FindBy(xpath = "//*[@id=\"success-subscribe\"]/div")
     public WebElement txtSuccessSubscribe;
+
+    // YENİ EKLENEN: Cart (Sepet) butonu
+    @FindBy(xpath = "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[3]/a")
+    public WebElement btnCart;
 }
