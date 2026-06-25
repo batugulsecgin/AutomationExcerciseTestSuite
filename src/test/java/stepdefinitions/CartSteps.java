@@ -2,10 +2,12 @@ package stepdefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.CartPage;
+import pages.HomePage;
 import pages.ProductsPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
@@ -14,8 +16,22 @@ import java.time.Duration;
 
 public class CartSteps {
 
+    HomePage homePage = new HomePage();
     ProductsPage productsPage = new ProductsPage();
     CartPage cartPage = new CartPage();
+
+    // --- Subscription Testinde Eksik Olan Metot Buraya Eklendi ---
+    @When("Click Cart button")
+    public void click_cart_button() {
+        // Menü butonuna tıklıyoruz (JS ile reklam engeline karşı)
+        ReusableMethods.clickWithJS(homePage.btnCart);
+
+        // REKLAM BYPASS: Reklam çıkarsa zorla sepete yönlendiriyoruz
+        if (Driver.getDriver().getCurrentUrl().contains("google_vignette")) {
+            Driver.getDriver().get("https://automationexercise.com/view_cart");
+        }
+    }
+    // -------------------------------------------------------------
 
     @Then("Hover over first product and click Add to cart")
     public void hover_over_first_product_and_click_add_to_cart() {

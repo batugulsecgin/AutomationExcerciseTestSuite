@@ -11,29 +11,31 @@ public class ContactUsPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//*[@id=\"contact-page\"]/div[3]/div[1]/div/h2")
+    // "GET IN TOUCH" yazısını kaçıncı div'de olursa olsun içindeki metinden bulur (Büyük/küçük harf duyarlılığına karşı iki durumu da ekledik)
+    @FindBy(xpath = "//h2[contains(text(), 'GET IN TOUCH') or contains(text(), 'Get In Touch')]")
     public WebElement txtGetInTouch;
 
-    @FindBy(xpath = "//*[@id=\"contact-us-form\"]/div[1]/input")
+    // Site geliştiricilerinin otomasyon için koyduğu "data-qa" etiketlerini kullanıyoruz (Asla kırılmaz)
+    @FindBy(xpath = "//*[@data-qa='name']")
     public WebElement inputName;
 
-    @FindBy(xpath = "//*[@id=\"contact-us-form\"]/div[2]/input")
+    @FindBy(xpath = "//*[@data-qa='email']")
     public WebElement inputEmail;
 
-    @FindBy(xpath = "//*[@id=\"contact-us-form\"]/div[3]/input")
+    @FindBy(xpath = "//*[@data-qa='subject']")
     public WebElement inputSubject;
 
-    @FindBy(xpath = "//*[@id=\"message\"]")
+    @FindBy(xpath = "//*[@data-qa='message']")
     public WebElement inputMessage;
 
-    @FindBy(xpath = "//*[@id=\"contact-us-form\"]/div[6]/input")
+    @FindBy(xpath = "//*[@data-qa='submit-button']")
     public WebElement btnSubmit;
 
-    // Senin güncellediğin tam isabetli Success Message XPath'i
-    @FindBy(xpath = "//*[@id=\"contact-page\"]/div[3]/div[1]/div/div[2]")
+    // Başarı mesajını class isminden yakalıyoruz
+    @FindBy(xpath = "//*[@class='status alert alert-success']")
     public WebElement txtSuccessMessage;
 
-    // Senin güncellediğin tam isabetli Home Button XPath'i
-    @FindBy(xpath = "//*[@id=\"form-section\"]/a/span")
+    // Home butonunu doğrudan Home kelimesinden yakalıyoruz
+    @FindBy(xpath = "//span[contains(text(), 'Home')]/parent::a")
     public WebElement btnHome;
 }

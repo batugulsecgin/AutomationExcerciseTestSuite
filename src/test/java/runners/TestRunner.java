@@ -16,10 +16,10 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions", "hooks"},
 
         //Kullanılabilir tag'ler:
-        // @smoke, @register, @negative_login, @logout, @existing_email, @contact,
-        // @testcases, @products, @search_product, @subscription, @cart_subscription
-        // @add_to_cart
-        tags = "@add_to_cart",
+        // @smoke, @register, @negative_login, @logout, @existing_email, @contact, @testcases,
+        // @products, @search_product, @subscription, @cart_subscription, @add_to_cart
+
+        tags = "@contact",
         dryRun = false
 )
 public class TestRunner {
