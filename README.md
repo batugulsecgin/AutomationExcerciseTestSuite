@@ -72,3 +72,6 @@ AutomationExerciseBDD/
 │           ├── features/          # Cucumber Gherkin (.feature) files
 │           └── configuration.properties # Global test configurations
 └── pom.xml                        # Maven dependencies and build configuration
+
+
+![Görüntülenme Sayısı](https://komarev.com/ghpvc/?username=SENIN_KULLANICI_ADIN&color=blue)
