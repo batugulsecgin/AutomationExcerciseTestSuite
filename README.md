@@ -2,7 +2,7 @@
 
 This repository contains a robust, scalable, and fully functional Test Automation Framework built for the [Automation Exercise](https://automationexercise.com/) website. The framework is designed using **Java**, **Selenium WebDriver**, and **Cucumber (BDD)**, adhering strictly to **Page Object Model (POM)** and **Clean Code** principles.
 
-![Görüntülenme Sayısı](https://komarev.com/ghpvc/?username=SENIN_KULLANICI_ADIN&color=blue)
+![Görüntülenme Sayısı](https://komarev.com/ghpvc/?username=batugulsecgin&color=blue)
 
 ## 🚀 Tech Stack & Tools
 * **Programming Language:** Java 17
